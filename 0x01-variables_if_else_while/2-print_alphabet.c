@@ -12,6 +12,6 @@ int main()
 	{
 		putchar(alphabets);
 	}
-	putchar("\n");
+	putchar('\n');
 	return 0;
 }
