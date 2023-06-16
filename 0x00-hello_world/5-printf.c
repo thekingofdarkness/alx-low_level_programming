@@ -2,8 +2,8 @@
 
 /**
  * main - prints the required message
- * Return : 0 if works properly
- */
+ * Return: 0 if exited properly
+ * */
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
