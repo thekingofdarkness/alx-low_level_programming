@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*
+/**
  * main - Is the start point of the program
  * Description :
  * this function is used as an entry point to the program
