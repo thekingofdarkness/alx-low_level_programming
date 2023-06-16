@@ -5,13 +5,14 @@
  * this function is the entry point of this program
  * Return: 0 if exited properly
  */
-int main() 
+int main(void) 
 {
 	char alphabets;
+
 	for (alphabets = 'a'; alphabets <= 'z'; alphabets++)
 	{
 		putchar(alphabets);
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
