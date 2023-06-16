@@ -3,6 +3,8 @@
 #include <stdio.h>
 /*
  * main - Is the start point of the program
+ * Description :
+ * this function is used as an entry point to the program
  * Return: 0 if exited properly
   */
 int main(void)
