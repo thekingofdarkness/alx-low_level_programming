@@ -3,7 +3,7 @@
  * main - This is the entry point
  * Description:
  * it is the axe of thhis thing
- * Retrun:
+ * Return:
  * if 0 is then the program has been exited prperly
  */
 int main(void)
