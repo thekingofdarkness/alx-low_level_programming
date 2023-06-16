@@ -5,7 +5,7 @@
  * this function is the entry point of this program
  * Return: 0 if exited properly
  */
-int main(void) 
+int main(void)
 {
 	char alphabets;
 
