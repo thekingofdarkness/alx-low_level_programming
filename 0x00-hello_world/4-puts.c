@@ -1,8 +1,12 @@
 #include <stdio.h>
-/*
- * main - prints exactly Programming is like building a multilingual puzzl
- * return 0 if exited properly return non zero otherwise
- */
+/**
+ * main - Entry point of the program
+ *
+ * This function prints the message "Programming is like building a multilingual puzzle"
+ * followed by a newline character.
+ *
+ * Return: Always 0 (indicating success)
+*/
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
