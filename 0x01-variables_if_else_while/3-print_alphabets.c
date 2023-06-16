@@ -5,7 +5,7 @@
  * this the entry point to app
  * Return: 0 if exited properly
  */
-int main (void)
+int main(void)
 {
 	char lowerc;
 	char upperc;
