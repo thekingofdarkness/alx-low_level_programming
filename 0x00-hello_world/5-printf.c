@@ -2,7 +2,7 @@
 
 /**
  * main - prints the required message
- * return : 0 if works properly
+ * Return : 0 if works properly
  */
 int main(void)
 {
