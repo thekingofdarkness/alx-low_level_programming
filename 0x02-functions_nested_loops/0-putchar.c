@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - the entry point
  * Retrun: 0 if exited properly
