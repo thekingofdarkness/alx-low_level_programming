@@ -1,10 +1,18 @@
 #include "main.h"
 /**
- * main - the entry point
- * Retrun: 0 if exited properly
+ * main - Entry point
+ * Return: Always 0 (success)
  */
-int main (void)
+int main(void)
 {
-	printf("__putchar\n");
+	char *sh = "_putchar";
+
+	while (*sh)
+	{
+		_putchar(*sh);
+		sh++;
+	}
+	_putchar('\n');
+
 	return (0);
 }
