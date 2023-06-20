@@ -1,1 +1,1 @@
-this is readme
+__juts diving into c__
