@@ -1,18 +1,44 @@
 #include "main.h"
-void print_times_table(int n) {
-    if (n > 15 || n < 0) {
-        return;
-    }
 
-    for (int i = 0; i <= 10; i++) {
-        std::cout << n << " x " << i << " = " << (n * i) << std::endl;
-    }
-}
+/**
+ * print_times_table - Prints the times table of the input,
+ *                     starting with 0.
+ * @n: The value of the times table to be printed.
+ */
+void print_times_table(int n)
+{
+	int num, mult, prod;
 
-int main() {
-    int num;
-    std::cout << "Enter a number between 0 and 15: ";
-    std::cin >> num;
-    print_times_table(num);
-    return 0;
+	if (n >= 0 && n <= 15)
+	{
+		for (num = 0; num <= n; num++)
+		{
+			_putchar('0');
+
+			for (mult = 1; mult <= n; mult++)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				prod = num * mult;
+
+				if (prod <= 99)
+					_putchar(' ');
+				if (prod <= 9)
+					_putchar(' ');
+
+				if (prod >= 100)
+				{
+					_putchar((prod / 100) + '0');
+					_putchar(((prod / 10)) % 10 + '0');
+				}
+				else if (prod <= 99 && prod >= 10)
+				{
+					_putchar((prod / 10) + '0');
+				}
+				_putchar((prod % 10) + '0');
+			}
+			_putchar('\n');
+		}
+	}
 }
