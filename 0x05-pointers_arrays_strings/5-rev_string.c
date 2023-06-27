@@ -8,6 +8,8 @@ void rev_string(char *s)
 {
 	int end = strlen(s) - 1;
 	int start = 0;
+	char t;
+
 	while (start < end)
 	{
 		s[start] = s[end];
