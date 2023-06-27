@@ -8,13 +8,13 @@
  */
 void puts_half(char *str)
 {
-	int len = strlen(str) - 1;
+	int len = strlen(str);
 	int start;
 	if (len % 2 == 0)
 	{
 		start = len / 2;
 	}
-	else
+	else if (len % 2)
 	{
 	start = (len - 1) / 2;
 	}
