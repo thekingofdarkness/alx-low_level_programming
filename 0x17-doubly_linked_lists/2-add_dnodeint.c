@@ -1,39 +1,50 @@
-#include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-
-#ifndef LISTS_H
-#define LISTS_H
+#include "lists.h"
 
 /**
- * struct dlistint_s - doubly linked list
- * @n: integer
- * @prev: points to the previous node
- * @next: points to the next node
- *
- * Description: doubly linked list node structure
- * 
+ * add_dnodeint - Adds a new node at the beginning of a dlistint_t list.
+ * @n: pointer to the head or start of the doubly linked list
+ * @head: address pointer
+ * Return: the address of the new element, or NULL if it failed
  */
 
-typedef struct dlistint_s
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-    int n;
-    struct dlistint_s *prev;
-    struct dlistint_s *next;
-} dlistint_t;
+	/*
+	 * We will create a temporary new node
+	 * and we will use malloc to allocate some memory for it.
+	 */
+	dlistint_t *temp_node = (dlistint_t *)malloc(sizeof(dlistint_t));
 
-size_t print_dlistint(const dlistint_t *h);
-size_t dlistint_len(const dlistint_t *h);
-dlistint_t *add_dnodeint(dlistint_t **head, const int n);
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
-void free_dlistint(dlistint_t *head);
-dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
-int sum_dlistint(dlistint_t *head);
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+	if (temp_node == NULL)
+	{
+		/*
+		 * It should return NULL if it failed to allocate
+		 * memory for the temp new node
+		 */
 
+		return (NULL);
+	}
 
+	/*
+	 * Let us now set value for the new temp node
+	 */
+	temp_node->n = n;
+	temp_node->prev = NULL;
+	temp_node->next = *head;
 
+	if (*head != NULL)
+	{
+		/*
+		 * Since the List is empty, therefore, there new temp node would
+		 * automatically becomes the head...
+		 */
+		(*head)->prev = temp_node;
+	}
 
-#endif /* LISTS_H */
+	/*
+	 * Updating the head pointer to the new temp node
+	 */
+	*head = temp_node;
+	return (temp_node);
+}
